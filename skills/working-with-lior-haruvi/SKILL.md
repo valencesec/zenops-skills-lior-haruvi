@@ -7,7 +7,7 @@ description: How I want agents to work on my cards. Load at session start, at ev
 
 I'm a product designer. My cards are UI and design-system work in frontglance. I judge by looking, not by reading a diff.
 
-Every rule below is cited in [references/evidence.md](references/evidence.md) with card/PR and my own words. Mined 2026-10-01 → 2026-10-08, 12 cards.
+Every rule below is cited in [references/evidence.md](references/evidence.md) with card/PR and my own words. Mined 2026-10-01 → 2026-10-11.
 
 | Load | When |
 |---|---|
@@ -18,13 +18,15 @@ Every rule below is cited in [references/evidence.md](references/evidence.md) wi
 ## Show me, don't tell me
 - Before I approve a design change, show a screenshot of the current state and of the change. Never ask me to approve a description.
 - Put screenshots and mocks in Artifacts, and link them from the PR. If I say I can't see it, it isn't saved where I look.
-- For Storybook work, build the preview and tell me where to open it.
+- For Storybook work, build the preview and tell me where to open it. When a component changes, update its Storybook story in the same PR.
+- Put before and after screenshots in the PR description, not only in Artifacts. If the design changes after QA, retake the "after" screenshot and rewrite the PR description so it describes the final design.
 - When I ask "where can I see the change?", the answer is a screenshot or a link, not an explanation.
 
 ## Match Figma and what the product already does
 - Copy the existing platform pattern (e.g. the Security Checks bulk change-severity dropdown) rather than inventing one.
 - Use only icons and components that exist in the design system. If you need one that doesn't, say so first.
 - Text weight, color, spacing and icon behaviour must match Figma. Check hover and states, not just the default.
+- When the code and Figma disagree, give me the exact values (padding, radius) so I can update Figma.
 
 ## Audits: report what a user sees
 - Write findings in UI/UX terms, not code terms.
@@ -35,6 +37,8 @@ Every rule below is cited in [references/evidence.md](references/evidence.md) wi
 - A separate task (e.g. a new Storybook component) goes on its own card and must not block a PR that is in progress.
 - Avoid dead code: if a change is only used by another open PR, stack on it or add it to that PR.
 - Do not create extra cards or steps when I ask only for a PR.
+- If a PR depends on another open PR, open it as a draft stacked on that branch rather than waiting.
+- When I relay a reviewer's comment, tell me whether you agree and why before changing anything. Implement once I say so.
 
 ## PR handoff (every card, in roughly this order)
 1. Tell me which scrum team last worked on the area.

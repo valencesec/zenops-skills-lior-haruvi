@@ -43,3 +43,13 @@ Quotes are verbatim, typed by me (human-classified turns only). Card numbers ref
 ## Single-instance, not promoted to rules
 - 5196 (PR #6514): reviewer comment I relayed — "Isn't it better to create 2 dedicated components on top of this component, that will have this message and won't get a message as a parameter?" (only once; maybe a component-design preference)
 - 4562/4937: "I think we need to save this as a skill" and push it to my skills repo (done twice, produced the two existing skills)
+
+## Added 2026-10-11 (full inventory with turn numbers is in the PR's evidence artifact)
+- PR description matches final design: 5247 "the PR still says \"Adds a layout=\"page\" option to VNotice…8px padding, a 12px gap and a 4px radius\"" after "yes, change it to 12/20, and no corner radius"
+- Screenshots in the PR: 5252 "you need to add screnshots before and after to the PR (in artifacts)" / "attach them to the PR description"; 5247 "update the PR with the new screenshot"; 5202 "add a link in the PR"
+- Storybook with every change: 5199 "update storybook as well"; 5247 "make sure the storybook updates accordingly"
+- Give me Figma numbers: 5247 "Give them to me and i'll update Figma"
+- Reviewer comments, assess first: 4918 "I recieved 5 comments from Guy. Review them…" then "yes, go ahead and implement them"; 5196 "does this makes sence?"
+- Draft PR instead of waiting: 5252 "why not create a draft PR for now?" / "stack it on 6516's branch"; 5202 "open the PR anyway as a draft"; 5200 "can you open a draft PR foe this and assign to Tomer?"
+- Separate card: 4918 "let's leave the tasks page to a different task. Leave the PR untuched" / "Create a new card for me to work on the Tasks page bulk"
+- New VALs and Tomer: 5247 VAL-16415, 5202 VAL-16412; 5202 "assign to Tomer"
