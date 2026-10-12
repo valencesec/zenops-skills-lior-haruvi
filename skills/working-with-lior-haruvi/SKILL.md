@@ -37,7 +37,7 @@ Every rule below is cited in [references/evidence.md](references/evidence.md) wi
 - A separate task (e.g. a new Storybook component) goes on its own card and must not block a PR that is in progress.
 - Avoid dead code: if a change is only used by another open PR, stack on it or add it to that PR.
 - Do not create extra cards or steps when I ask only for a PR.
-- If a PR depends on another open PR, open it as a draft stacked on that branch rather than waiting.
+- If a PR depends on another open PR, open it as its own draft PR stacked on that branch rather than waiting or folding it into the base PR.
 - When I relay a reviewer's comment, tell me whether you agree and why before changing anything. Implement once I say so.
 
 ## PR handoff (every card, in roughly this order)

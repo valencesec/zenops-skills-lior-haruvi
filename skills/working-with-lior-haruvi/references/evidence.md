@@ -53,3 +53,4 @@ Quotes are verbatim, typed by me (human-classified turns only). Card numbers ref
 - Draft PR instead of waiting: 5252 "why not create a draft PR for now?" / "stack it on 6516's branch"; 5202 "open the PR anyway as a draft"; 5200 "can you open a draft PR foe this and assign to Tomer?"
 - Separate card: 4918 "let's leave the tasks page to a different task. Leave the PR untuched" / "Create a new card for me to work on the Tasks page bulk"
 - New VALs and Tomer: 5247 VAL-16415, 5202 VAL-16412; 5202 "assign to Tomer"
+- Confirmed 2026-10-12: "1. Draft PR" (separate stacked draft PR, not folded into the base PR, for the 5200 case)
