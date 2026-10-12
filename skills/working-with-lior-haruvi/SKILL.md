@@ -5,7 +5,7 @@ description: How I want agents to work on my cards. Load at session start, at ev
 
 # Working with me (Lior Haruvi)
 
-I'm a product designer. My cards are UI and design-system work in frontglance. I judge by looking, not by reading a diff.
+I'm a product designer. My GitHub handle is `liorharuvi-valence`. My cards are UI and design-system work in frontglance. I judge by looking, not by reading a diff.
 
 Every rule below is cited in [references/evidence.md](references/evidence.md) with card/PR and my own words. Mined 2026-10-01 → 2026-10-11.
 
@@ -46,6 +46,9 @@ Every rule below is cited in [references/evidence.md](references/evidence.md) wi
 3. Run `/code-review low --fix` on the card's diff.
 4. Push, open the PR, assign it and request review from the reviewer I name (recently Tomer).
 5. Mark ready for review only when I say so.
+
+## Plans
+I approve each plan myself. Do not treat an earlier approval as standing; wait for it every time.
 
 ## Think hard on design judgment
 When I write "ultrathink", or ask whether an organization or naming choice follows industry standards (Material, Apple, Atlassian), compare against those systems and the product, and say what you are unsure about.

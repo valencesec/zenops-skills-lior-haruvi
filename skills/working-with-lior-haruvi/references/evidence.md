@@ -54,3 +54,4 @@ Quotes are verbatim, typed by me (human-classified turns only). Card numbers ref
 - Separate card: 4918 "let's leave the tasks page to a different task. Leave the PR untuched" / "Create a new card for me to work on the Tasks page bulk"
 - New VALs and Tomer: 5247 VAL-16415, 5202 VAL-16412; 5202 "assign to Tomer"
 - Confirmed 2026-10-12: "1. Draft PR" (separate stacked draft PR, not folded into the base PR, for the 5200 case)
+- Confirmed 2026-10-12: GitHub handle is "liorharuvi-valence"; plan approval is not standing ("3. No")
