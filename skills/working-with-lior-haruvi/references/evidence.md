@@ -76,3 +76,14 @@ Quotes are verbatim, typed by me (human-classified turns only). Card numbers ref
 - Ultrathink: 5371 "#ultrathink compare this screen to other industry bunchmanrk's settings screen"; 4918 "ultrathink make sure you covered all use cases"
 - Single-instance, not promoted: 5196 "can you do that to all other cards that needs to be closed?" / "the first one, only my cards, list them first" (list before bulk actions on my cards); 5252 "This is marked as deployed, but I don't see it in production"; 5429 "write the migration using go run go/acli/main.go data migration"
 - Confirmed 2026-10-26: "You can allways open" (VAL), Title Case "Yes", stacked-PR overlap check "Right"
+
+## Added 2026-10-13 (window 2026-10-11 → 2026-10-13, 14 cards, 45 sessions, 28 deduped human messages)
+- Use the real design-system pieces: 5371 "Make sure you use proper elemnts from the design system and DONT create any new one (toggle on your mock doesn'tlook right)"; "The text on the toggle is not aligned on the same hight. … isn't the \"Not Configured\" tag a new component?"; "the \"toggle\" is actually \"SwitchWithLabel\" In storybook"
+- Missing component → own card, stacked: 5371 "We need to add the tags to storybook in a seperate card. and when we open a PR they should be stucked together, because if we won't the code might delete the tags if they are \"dead code\""; 5378 "the PR should be draft stucked on …pull/6551"
+- Mocks must be refreshed: 5371 "The artifacts havn't updated"; "yes, mock the proposed layout"
+- Load my skill: 5371 "Are you using knowmebetter?" / "load working-with-lior-haruvi and redo it"
+- Industry comparison, CTA placement: 5371 "#ultrathink compare this screen to other industry bunchmanrk's settings screen … where shpuld the CTA'S be located?"
+- Show old states: 5406 "I want to see how the main nav bar (side menu) looked with beta tag when we had 2 version of it- expanded and closed and narow"
+- Needs-input question (6 cards): 4720, 5196, 5199, 5203, 5252, 5245 "why is this card marked as needs input?"
+- Batch scope (single instance, kept as a minor rule): 5196 "can you do that to all other cards that needs to be closed?" → "the first one, only my cards, list them first" → "yes, withdraw them except 4641"
+- Not promoted: 5371 "leave a note" (unclear referent)

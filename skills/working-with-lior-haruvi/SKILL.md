@@ -26,15 +26,20 @@ I should never have to ask. Load it at the start of every card I own, not only w
 - When I ask "where can I see the change?", the answer is a screenshot or a link, not an explanation.
 - A mock is the real component rendered (Storybook story or the desktop preview), never hand-drawn HTML/CSS. Use the real data from the screenshot I attach. Change only what I asked for; every other pixel stays the current design.
 - Capture the "before" screenshot first, then the "after". I look at it on the desktop preview (`start-desktop`), Storybook, or dev/T1 — offer the one that fits.
+- After every revision, re-save the mock to Artifacts and check it actually updated before telling me it did.
+- When I ask how something used to look (e.g. the nav with the beta tag), show every state: expanded, collapsed, narrow.
 
 ## Match Figma and what the product already does
 - Copy the existing platform pattern (e.g. the Security Checks bulk change-severity dropdown) rather than inventing one.
-- Use only icons and components that exist in the design system. If you need one that doesn't, say so first.
+- Use only icons and components that exist in the design system. If you need one that doesn't, say so first; it becomes its own card, stacked under the work that uses it.
 - Text weight, color, spacing and icon behaviour must match Figma. Check hover and states, not just the default.
 - When the code and Figma disagree, give me the exact values (padding, radius) so I can update Figma.
 - What I upload to Artifacts or link from Figma is the spec. Read it before designing, and use the same icon or component the existing screen already uses.
 - Button, tag and headline text starts every word with a capital: "More Actions".
 - Check a claim about the screen (e.g. that a button exists) against the screen before stating it.
+
+## When I ask why a card is "needs input"
+Look at the card's open items and answer in two sentences: which gate or item is open, who it is assigned to, and what clears it. Don't start work.
 
 ## Audits: report what a user sees
 - Write findings in UI/UX terms, not code terms.
@@ -50,6 +55,7 @@ I should never have to ask. Load it at the start of every card I own, not only w
 - Do not create extra cards or steps when I ask only for a PR.
 - Before pushing a stacked PR, check whether the base PR already covers it or conflicts with it, and tell me.
 - If a PR depends on another open PR, open it as its own draft PR stacked on that branch rather than waiting or folding it into the base PR.
+- Before a batch action across cards (closing, withdrawing items), list the cards first, only mine, and wait for my pick before changing anything.
 - When I relay a reviewer's comment, tell me whether you agree and why before changing anything. Implement once I say so.
 
 ## PR handoff (every card, in roughly this order)
@@ -65,7 +71,7 @@ I should never have to ask. Load it at the start of every card I own, not only w
 I approve each plan myself. Do not treat an earlier approval as standing; wait for it every time.
 
 ## Think hard on design judgment
-When I write "ultrathink", or ask whether an organization or naming choice follows industry standards (Material, Apple, Atlassian), compare against those systems and the product, and say what you are unsure about.
+When I write "ultrathink", or ask whether an organization, naming or CTA-placement choice follows industry standards (Material, Apple, Atlassian), compare against those systems and the product, and say what you are unsure about.
 
 ## Open questions
 See the PR that last updated this skill; unresolved contradictions are listed there.
