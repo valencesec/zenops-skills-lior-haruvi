@@ -55,3 +55,23 @@ Quotes are verbatim, typed by me (human-classified turns only). Card numbers ref
 - New VALs and Tomer: 5247 VAL-16415, 5202 VAL-16412; 5202 "assign to Tomer"
 - Confirmed 2026-10-12: "1. Draft PR" (separate stacked draft PR, not folded into the base PR, for the 5200 case)
 - Confirmed 2026-10-12: GitHub handle is "liorharuvi-valence"; plan approval is not standing ("3. No")
+
+## Added 2026-10-18 (window 2026-10-11 → 2026-10-18; full inventory in the PR's evidence artifact)
+- Load it yourself: 5371 "Are you using knowmebetter?" / "load working-with-lior-haruvi and redo it"; 5245 "use /working-with-lior-haruvi"; 5327 "I want this skill to load on every card i'm working on, and keep updating"
+- Mocks are the real design: 5245 "you need to only use components we use in the product. Outline bulk button" / "I want to see an accurate mock" / "keep it as is and change nothing"; 5371 "Make sure you use proper elemnts from the design system and DONT create any new one"; 5414 "this looks bad. It should follow all other similar inventory widgets"; 5668 "This looks bad. Only use the curent design, don't change anything. just the location of the icon" / "use real checks data from the screenshot I added"
+- Desktop preview / dev / T1: 5245 "show me a desktop preview", "begin QA — when it runs start-desktop viewer"; 5414 "fix it and show me on desktop preview"; 5395 "i want to see that it looks ok on T1"; 5537 "start-desktop", "use dev 6, I need screenshots"; 4918 "Start desktop preview"
+- Before first: 5537 "capture the before screenshots first"
+- The upload is the spec: 5245 "I added to artifacts the required design for this" / "Colors should be as my design" / "in SaaS Apps the icon for santion is \"completed_workflows_menu_item.svg\" that's what I'm using"; 5371 "You can see the settings screen on figma and artifacts"
+- Capitalisation (one card, stated as "always"): 5537 "It should say \"More Actions\" - allways on Buttons, Tags and headlines the first letter should be upper case"
+- Verify claims: 5245 "are you sure there's an \"actions\" button in this screen?"
+- Intentional differences: 5475 "Remove finding #3 (disabled buttons) from ui-audit-security-checks-v3.md: they're different button types, so the difference is intentional."; pasted instruction "Remove the border comparison between the gear and the table buttons: they're different kinds of buttons."
+- Audit report format: 5475 "Make each finding a heading, add a screenshot link and a clickable \"Details: see finding #N\" link to every Top 5 item and summary point, and write severity as words." / "The links are still broken"; 5654 "Move every finding marked \"Also on\" or \"Similar to\" Security Checks into one section, \"Already reported on other screens\"" / "Generate the HTML version of v2 like card 5475 had"
+- Base PR may already cover it: 5200 "WAIT, THIS TASK IS INSIDE 6516, SO WE DON'T NEED A SEPERATE pr FOR IT, NO?"; 5202 "this has conflicts, do we need this PR? or is it covered?"; 5247 "this overlaps with #6516 so there's a conflicts, do we need this PR? or is it covered?"
+- Open a VAL for me: 5414 "Open a val ticket, assign it to the scrum team responsible for this / last worked on it"; 5395 "open a val" / "create a val ticket with Remy in the scrum tem"
+- Reviewers: 5377 "open a PR on Guy"; 5429 "REVIEWR Shlomi , scrum teal CTO"; 5395 "put this on remy"
+- Attach and bug: 5414 "point in the PR that this is a bug" / "attach the PR to the card"; 5429 "mark them ready for review, pin the link to this card"
+- CI status: 5202 "is CI green yet?"; 5245 "what does CI failling means?"; 5247 "CI is failing, fix please"; 5414 "fix failling CI"
+- Slack message for the reviewer: 4918 "what shpuld I tell Tomer? it's fixed?"; 5202 "what should I say to tomer?"; 5247 "Let me know what to write to tomer on slack as a short message"
+- Stacked order: 5378 "the PR should be draft stucked on …/pull/6551 … When #5377 merges, retarget this one to the main branch."; 5371 "when we open a PR they should be stucked together, because if we won't the code might delete the tags if they are \"dead code\""
+- Ultrathink: 5371 "#ultrathink compare this screen to other industry bunchmanrk's settings screen"; 4918 "ultrathink make sure you covered all use cases"
+- Single-instance, not promoted: 5196 "can you do that to all other cards that needs to be closed?" / "the first one, only my cards, list them first" (list before bulk actions on my cards); 5252 "This is marked as deployed, but I don't see it in production"; 5429 "write the migration using go run go/acli/main.go data migration"
