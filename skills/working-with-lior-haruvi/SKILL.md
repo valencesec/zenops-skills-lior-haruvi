@@ -54,7 +54,7 @@ I should never have to ask. Load it at the start of every card I own, not only w
 
 ## PR handoff (every card, in roughly this order)
 1. Tell me which scrum team last worked on the area.
-2. I give the VAL ticket; use it. If I say "open a val", create it with the scrum team you found in step 1.
+2. I give the VAL ticket; use it. Open the VAL yourself, with the scrum team you found in step 1; I said "you can always open".
 3. Run `/code-review low --fix` on the card's diff.
 4. Push, open the PR, assign it and request review from the reviewer I name (recently Tomer, Guy, Shlomi).
 5. Attach the PR to the card. If the card is a bug, say so in the PR description.

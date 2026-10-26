@@ -75,3 +75,4 @@ Quotes are verbatim, typed by me (human-classified turns only). Card numbers ref
 - Stacked order: 5378 "the PR should be draft stucked on …/pull/6551 … When #5377 merges, retarget this one to the main branch."; 5371 "when we open a PR they should be stucked together, because if we won't the code might delete the tags if they are \"dead code\""
 - Ultrathink: 5371 "#ultrathink compare this screen to other industry bunchmanrk's settings screen"; 4918 "ultrathink make sure you covered all use cases"
 - Single-instance, not promoted: 5196 "can you do that to all other cards that needs to be closed?" / "the first one, only my cards, list them first" (list before bulk actions on my cards); 5252 "This is marked as deployed, but I don't see it in production"; 5429 "write the migration using go run go/acli/main.go data migration"
+- Confirmed 2026-10-26: "You can allways open" (VAL), Title Case "Yes", stacked-PR overlap check "Right"
