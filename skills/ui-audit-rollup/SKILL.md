@@ -10,11 +10,11 @@ You combine the results of several screen-audit cards into one master component 
 ## Read these first
 
 The `ui-screen-audit` skill's reference files are the source of truth:
-- `ui-screen-audit/references/design-decisions.md`
-- `ui-screen-audit/references/triage-rules.md`
-- `ui-screen-audit/references/issue-kinds.md`
+- `skills/ui-screen-audit/references/design-decisions.md`
+- `skills/ui-screen-audit/references/triage-rules.md`
+- `skills/ui-screen-audit/references/issue-kinds.md`
 
-Write for a product designer, following the "Writing for a product designer" section of `ui-screen-audit/SKILL.md`.
+Write for a product designer, following the "Writing for a product designer" section of `skills/ui-screen-audit/SKILL.md`.
 
 ## Inputs
 
