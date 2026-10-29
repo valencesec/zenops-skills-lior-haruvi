@@ -13,6 +13,7 @@ To add a rule: Lior approves it (usually a Trivial decision), and it's added her
 - **Side panels (drawers):** the panel title is the largest text, and only the title and close button stay pinned.
 - **Small gray secondary text** uses the darker secondary gray (#5f6672, 5.8:1). Lighter gray for small readable text is a Bug.
 - **Inventory side panels** overlap the table by design and are 800px wide. A panel with a different width is a Bug.
+- **The 800px width applies only to item detail side panels**, not to filter pickers like the Add-filter drawer. Filter pickers need no title.
 
 ## Behavior and content rules
 
@@ -25,6 +26,7 @@ To add a rule: Lior approves it (usually a Trivial decision), and it's added her
 - **Empty values** stay empty, or show a "no info" tag where that's already used. Don't flag blank values.
 - **Rows that open a side panel** show a pointer cursor, like the other inventory tables.
 - **Summary widget rows** lock while a filter is on, by design; Clear filters is the way out. Do flag a widget that doesn't show which row the active filter came from.
+- **Loading:** a screen shows its widget and table loading skeletons while data loads. A full-page logo instead of the skeletons is a Bug.
 - **Failed requests** open the global pop-up "An error has occurred" ("Please try refreshing the page. If the issue persists, contact support."), so tables don't need their own error state.
 - **The light-teal filled "Save View" button** is an approved button variant.
 - **The bulk-action bar** (Actions, Change Severity, Track/Untrack) is being redesigned. Skip it until told otherwise.

@@ -26,7 +26,8 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T19 | Active filter's options below the fold | Trivial decision | | Approved | Rule: the filter sidebar opens scrolled to the active filter |
 | T21a | Copies of the same element that look the same | Engineering only | | | Merge into the one to keep |
 | T21b | Copies of the same element that already look or behave differently | Trivial decision | | Approved | Keep the version the report names; if none is clearly right, UX/UI process |
-| T23 | Inventory side panel width differs from 800px | Bug | | | |
+| T23 | Item detail side panel width differs from 800px | Bug | | | Doesn't apply to filter pickers (e.g. Add-filter drawer) |
+| T24 | Full-page logo while loading instead of the widget and table skeletons | Bug | | | Found on Integrations Inventory (card 6111) |
 | U01 | Widgets row breaks at smaller widths | UX/UI process | | | One responsive rule for every screen. Symptom: platform names squeezed out of instance labels |
 | U02 | Table toolbar overflows at smaller widths | UX/UI process | | | Designed once on the shared toolbar component |
 | U04 | Page scrolls in several nested layers | UX/UI process | | | Needs a scroll model for table screens |
