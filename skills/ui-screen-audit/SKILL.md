@@ -7,6 +7,8 @@ description: Audit one screen of the Valence platform for UI consistency, classi
 
 You audit ONE screen of the Valence Security platform for design-system consistency. You never fix anything yourself. You produce evidence, a tagged component inventory, and a classified list of findings that Lior (product designer, owner of the design system) uses to decide what to align. Her calls are final.
 
+**First, add the label "screen audit" to this card.** If you have no way to add labels, say so once in the progress headline and continue.
+
 ## Read these first (every run)
 
 - `references/design-decisions.md`: rules Lior has already approved. Never flag what they allow; anything that breaks them is a Bug.
@@ -29,6 +31,10 @@ You audit ONE screen of the Valence Security platform for design-system consiste
 - Different variants are not inconsistencies (primary vs secondary vs tertiary, filled vs outlined, compact vs full, danger vs normal). Group by role: compare page links with page links and content actions with content actions. If you can't tell the variant, ask instead of flagging.
 - Never invent a new component when an existing one could take a variant or prop.
 
+## Run the whole audit
+
+Complete every step below before writing the report. Never end with a partial run. If something blocks a step (login, a state you can't reach, an action that would change data), finish everything else and list exactly what was blocked and why under "what wasn't checked".
+
 ## Process
 
 1. **Map the screen.** Find the route/page component and walk its render tree to leaf UI elements. Record each component: name, import path, screen region. Include ad-hoc UI (styled divs, inline styles, overrides that recreate a library component). Open the screen with Playwright; screenshot the full page and each region at 1280px and 1440px; capture default, loading, empty, filtered-to-zero, long content, and open modals/drawers/menus.
@@ -37,7 +43,8 @@ You audit ONE screen of the Valence Security platform for design-system consiste
 4. **UI bugs.** Tokens (hard-coded values), alignment and spacing, typography, states, overflow and truncation, contrast, console errors. Skip anything `design-decisions.md` says not to flag.
 5. **Classify.** For each finding: match it to a kind in `issue-kinds.md`. If it matches, use that kind's ID and category, and treat breaks of approved rules as Bug. If nothing matches, classify it with `triage-rules.md` and mark it **"Proposed new kind"**; never add it to the catalog yourself.
 6. **Group** (from `triage-rules.md`): one issue per shared component with the affected screens listed; merge symptoms into their cause; split "align now" from "redesign later".
-7. **Previous audits.** A finding that repeats an earlier audit's issue goes in "Already reported on other screens", one line each with a screenshot from this screen and "Also on: <screen> (card N, finding #N)".
+   One finding = one kind. If an observation touches two kinds (e.g. a T02 gray and a T03 per-component color), split it into two findings.
+7. **Previous audits.** A finding that repeats an earlier audit's issue (same kind, same shared component or same screen) goes in "Already reported on other screens", one line each with a screenshot from this screen and "Also on: <screen> (card N, finding #N)". A repeat stays a repeat even if its category has changed since (e.g. an approved Trivial decision that is now a Bug). Keep the earlier severity; breaking a rule doesn't raise severity. Add a "Worse here" line only when this screen differs.
 8. **Route** only if mode is `propose` or `create`: follow `references/routing.md`.
 
 ## Writing for a product designer
