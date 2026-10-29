@@ -1,6 +1,6 @@
 # Routing findings to cards
 
-Only used when the card's mode is `propose` or `create`. In `report` mode (the default), skip this file.
+Used only by the `ui-audit-rollup` skill, after it has merged all screen reports into one list of issues. Screen audits never use this file. The roll-up card's mode decides what happens:
 
 - **`propose`**: don't create anything. Write `routing-plan.md` listing every card you would create or update, then stop and ask Lior to approve it.
 - **`create`**: create and update the cards, then write `routing-plan.md` as a record of what you did.
@@ -23,8 +23,8 @@ Search for an open card about the same issue kind (`list_cards` with a keyword f
 ## Fix cards (Bug, Engineering only)
 
 - **Title:** `[UI fix] <what's wrong, in user terms>`
-- **Track:** engineering. **Team** and **owner**: same as the audit card unless the audit card says otherwise.
-- **Description:** each issue with its kind ID, screens affected, screenshot links (from the audit card's artifacts), the expected result in design terms, and the developer notes. End with: "Before merging, attach before-and-after screenshots of every screen listed, for Lior's design review."
+- **Track:** engineering. **Team** and **owner**: same as the roll-up card unless the roll-up card says otherwise.
+- **Description:** each issue with its kind ID, every screen affected (with its audit card number), screenshot links (from the audit cards' artifacts), the expected result in design terms, and the developer notes. End with: "Before merging, attach before-and-after screenshots of every screen listed, for Lior's design review."
 
 ### Bundling small fixes
 
@@ -43,11 +43,11 @@ Inside a bundle, list each issue separately with its own screenshot, so Lior can
 
 ## Decisions card
 
-One card per audit run, collecting everything that needs Lior's yes/no:
-- **Title:** `[UI decisions] <screen name> audit`
+One card per roll-up run, collecting everything that needs Lior's yes/no:
+- **Title:** `[UI decisions] roll-up <date>`
 - **Track:** raw. **Owner:** Lior.
 - **Description:** one item per decision: the question, the options, a screenshot, and which kind it belongs to (or "Proposed new kind" with its suggested category). Also list any proposed new kinds.
-- **When Lior answers in that card's session:** for each approved decision, open a draft pull request in `valencesec/zenops-skills-lior-haruvi` that adds the rule to `ui-screen-audit/references/design-decisions.md` and updates the kind's status in `issue-kinds.md`. Then create the fix card for it. For approved new kinds, add them to `issue-kinds.md` in the same pull request.
+- **When Lior answers in that card's session:** for each approved decision, open a draft pull request in `valencesec/zenops-skills-lior-haruvi` that adds the rule to `skills/ui-screen-audit/references/design-decisions.md` and updates the kind's status in `skills/ui-screen-audit/references/issue-kinds.md`. Then create the fix card for it. For approved new kinds, add them to `issue-kinds.md` in the same pull request.
 
 ## routing-plan.md
 

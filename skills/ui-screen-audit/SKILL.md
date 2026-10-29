@@ -1,6 +1,6 @@
 ---
 name: ui-screen-audit
-description: Audit one screen of the Valence platform for UI consistency, classify every finding with Lior's triage rules, and (when the card asks) route findings to fix cards, UX/UI cards and a decisions card. Use when a card asks for a UI screen audit.
+description: Audit one screen of the Valence platform for UI consistency and classify every finding with Lior's triage rules. Produces a report only; turning findings into cards happens in the ui-audit-rollup skill. Use when a card asks for a UI screen audit.
 ---
 
 # UI Screen Audit
@@ -14,13 +14,13 @@ You audit ONE screen of the Valence Security platform for design-system consiste
 - `references/design-decisions.md`: rules Lior has already approved. Never flag what they allow; anything that breaks them is a Bug.
 - `references/triage-rules.md`: how to give every finding a category and tag.
 - `references/issue-kinds.md`: the catalog of known issue kinds. Match each finding to a kind and reuse its ID and category.
-- `references/routing.md`: what happens to each category after the report. Only used when the card's mode is `propose` or `create`.
+- `references/routing.md` is NOT used here: screen audits never plan or create cards. The `ui-audit-rollup` skill does that for all screens at once.
 
 ## Inputs (from the card description)
 
 - **Screen**: name + URL. If the URL is missing, stop and ask; don't guess.
 - **Previous audits**: card numbers of earlier screen audits. Read their latest report and inventory.
-- **Mode**: `report` (default), `propose` or `create`. See `references/routing.md`.
+- **Mode**: always `report`. If the card asks for `propose` or `create`, write the report only and say in the progress headline that card planning happens in the roll-up.
 - **Environment / login**: use what the card says, otherwise the shared T1 admin test user. If login fails, stop and open a pick-up action item; don't audit from code alone.
 
 ## Rules
@@ -45,7 +45,6 @@ Complete every step below before writing the report. Never end with a partial ru
 6. **Group** (from `triage-rules.md`): one issue per shared component with the affected screens listed; merge symptoms into their cause; split "align now" from "redesign later".
    One finding = one kind. If an observation touches two kinds (e.g. a T02 gray and a T03 per-component color), split it into two findings.
 7. **Previous audits.** A finding that repeats an earlier audit's issue (same kind, same shared component or same screen) goes in "Already reported on other screens", one line each with a screenshot from this screen and "Also on: <screen> (card N, finding #N)". A repeat stays a repeat even if its category has changed since (e.g. an approved Trivial decision that is now a Bug). Keep the earlier severity; breaking a rule doesn't raise severity. Add a "Worse here" line only when this screen differs.
-8. **Route** only if mode is `propose` or `create`: follow `references/routing.md`.
 
 ## Writing for a product designer
 
@@ -69,7 +68,6 @@ Complete every step below before writing the report. Never end with a partial ru
 2. `component-inventory-<screen-slug>.csv` and `.json`: `name, ui_description, import_path, type, storybook, consistency, duplicate_group, keep, usages_in_repo, screen, issues, notes`. Keep these exact columns for the roll-up.
 3. `screens/`: every screenshot referenced.
 4. `ui-audit-<screen-slug>.html`: self-contained HTML of the report with screenshots embedded and links working. Regenerate it whenever the .md changes.
-5. In `propose` or `create` mode: `routing-plan.md` (see `references/routing.md`).
 
 Update the progress headline with the summary line, then complete the session as the card's track expects.
 
