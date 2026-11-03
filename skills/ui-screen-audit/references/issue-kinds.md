@@ -13,7 +13,7 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T02 | Lightest grays used for readable text (hints, "No Information") | Trivial decision | Accessibility | Approved | Rule: lightest grays only for borders and disabled items; one placeholder color at 4.5:1 or more |
 | T03 | Status and accent colors too light for text or icons | Trivial decision | Accessibility | Per component | Not a general rule: Lior decides each component separately. Every occurrence goes to the decisions card with the component, the color and its contrast |
 | T04 | Same element in different sizes, or text under 10px | Bug | | | Breaks existing size rules |
-| T05a | Side panel breaks the drawer rules (heading sizes, pinned area) | Trivial decision | | Approved | Rule: title is the largest text; only title and close stay pinned |
+| T05a | Side panel breaks the drawer rules (heading sizes and colours, label and value styles, pinned area) | Trivial decision | | Approved | Rule: title is the largest text; headings semibold black; attribute labels regular #5f6672 with no colon, values black; only title and close stay pinned. Example: Identities panel "Title" label is black and its value gray (reversed) |
 | T05b | Area built without a design process needs a redesign | UX/UI process | | | Activity Monitoring side panel |
 | T06 | Icon-only button without a tooltip | Trivial decision | | Approved | Now a rule, so new occurrences are Bugs |
 | T07 | Control or meaningful icon without a screen-reader name | Engineering only | Accessibility | | Name = tooltip or visible label; severity stays Must fix |

@@ -10,7 +10,12 @@ To add a rule: Lior approves it (usually a Trivial decision), and it's added her
 - **Category tags** are the same size everywhere. A size difference (e.g. table vs side panel) is a Bug.
 - **Lightest grays** are only for borders and disabled items. Every input uses one placeholder color with at least 4.5:1 contrast. Readable text in the lightest grays is a Bug.
 - **Pop-ups** are never taller than 80% of the window. The title and buttons stay fixed and only the content scrolls. Anything taller is a Bug.
-- **Side panels (drawers):** the panel title is the largest text, and only the title and close button stay pinned.
+- **Side panels (drawers):** the panel title is the largest text, and only the title and close button stay pinned. Information inside the panel follows the Identities side panel design:
+  - **Section headings and count rows** ("Integrations 2", "Admin accounts 1", "Accounts 6", "Threats 3"): heading in semibold black, sentence case, no colon; the count after it in regular black. An optional icon sits before the heading, and a section-level link ("View Inventory", "View in activity monitoring") sits at the right end of the same row.
+  - **Attribute rows** ("Title Security Team lead", "Last login May 12, 2023", "Reports to manager@mail.com"): the label in regular secondary gray #5f6672 with no colon, the value right after it in regular black. Several short pairs may share one line.
+  - **Missing values** show "No information" in gray, or stay empty, as the empty-values rule says.
+  - **Links** are teal; disabled links follow the disabled-link rule.
+  - Anything else is a Bug: a gray section heading, a black or bold attribute label, a gray value, a colon after a label, or Title Case labels ("Admin Accounts").
 - **Small gray secondary text** uses the darker secondary gray (#5f6672, 5.8:1). Lighter gray for small readable text is a Bug.
 - **Inventory side panels** overlap the table by design and are 800px wide. A panel with a different width is a Bug.
 - **The 800px width applies only to item detail side panels**, not to filter pickers like the Add-filter drawer. Filter pickers need no title.
