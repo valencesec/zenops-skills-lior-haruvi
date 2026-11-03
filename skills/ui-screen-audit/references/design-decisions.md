@@ -14,6 +14,7 @@ To add a rule: Lior approves it (usually a Trivial decision), and it's added her
 - **Small gray secondary text** uses the darker secondary gray (#5f6672, 5.8:1). Lighter gray for small readable text is a Bug.
 - **Inventory side panels** overlap the table by design and are 800px wide. A panel with a different width is a Bug.
 - **The 800px width applies only to item detail side panels**, not to filter pickers like the Add-filter drawer. Filter pickers need no title.
+- **Outlined icon-only buttons** (settings gear, sort direction, download and similar) use the gray stroke #cbd0d7, never a teal stroke. A teal stroke on an icon-only button is a Bug. Found on Security Checks Dashboard (card 6123, finding #5) and Integrations Inventory (card 6111, finding #3, the Accounts-tab download button).
 
 ## Behavior and content rules
 
