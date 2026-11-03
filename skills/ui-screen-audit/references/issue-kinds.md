@@ -28,6 +28,7 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T21b | Copies of the same element that already look or behave differently | Trivial decision | | Approved | Keep the version the report names; if none is clearly right, UX/UI process |
 | T23 | Item detail side panel width differs from 800px | Bug | | | Doesn't apply to filter pickers (e.g. Add-filter drawer) |
 | T24 | Full-page logo while loading instead of the widget and table skeletons | Bug | | | Found on Integrations Inventory (card 6111) |
+| T25 | Outlined icon-only button with a teal stroke instead of gray | Bug | | | Rule: gray stroke #cbd0d7 for every outlined icon-only button (card 6123, finding #5) |
 | U01 | Widgets row breaks at smaller widths | UX/UI process | | | One responsive rule for every screen. Symptom: platform names squeezed out of instance labels |
 | U02 | Table toolbar overflows at smaller widths | UX/UI process | | | Designed once on the shared toolbar component |
 | U04 | Page scrolls in several nested layers | UX/UI process | | | Needs a scroll model for table screens |
