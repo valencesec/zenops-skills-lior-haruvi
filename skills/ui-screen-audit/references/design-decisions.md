@@ -35,6 +35,7 @@ To add a rule: Lior approves it (usually a Trivial decision), and it's added her
 - **Loading:** a screen shows its widget and table loading skeletons while data loads. A full-page logo instead of the skeletons is a Bug.
 - **Failed requests** open the global pop-up "An error has occurred" ("Please try refreshing the page. If the issue persists, contact support."), so tables don't need their own error state.
 - **The light-teal filled "Save View" button** is an approved button variant.
+- **The main filled CTA button** (white text on light teal #6fcad3, e.g. "Create New", "Create Jira Issue", "Apply") is the approved primary button. Don't flag its contrast.
 - **The bulk-action bar** (Actions, Change Severity, Track/Untrack) is being redesigned. Skip it until told otherwise.
 - **Shared UI behaves the same on every screen.** If a shared element works on some screens and breaks on others, flag it once and list the screens.
 
@@ -47,3 +48,4 @@ To add a rule: Lior approves it (usually a Trivial decision), and it's added her
 - A side panel covering the table
 - Cut-off search box hints
 - Blank (empty) values
+- The contrast of the main filled CTA button (white on light teal).
