@@ -49,3 +49,4 @@ To add a rule: Lior approves it (usually a Trivial decision), and it's added her
 - Cut-off search box hints
 - Blank (empty) values
 - The contrast of the main filled CTA button (white on light teal).
+- Table search that applies on Enter (by design).
