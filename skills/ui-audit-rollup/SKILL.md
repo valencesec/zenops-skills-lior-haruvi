@@ -10,7 +10,8 @@ You combine the results of several screen-audit cards into one master component 
 ## Read these first
 
 The `ui-screen-audit` skill's reference files are the source of truth:
-- `skills/ui-screen-audit/references/design-decisions.md`
+- frontglance `DESIGN.md` (the product design rules)
+- `skills/ui-screen-audit/references/design-decisions.md` (the audit rules)
 - `skills/ui-screen-audit/references/triage-rules.md`
 - `skills/ui-screen-audit/references/issue-kinds.md`
 - `skills/ui-screen-audit/references/routing.md` (how issues become cards)
@@ -28,7 +29,9 @@ Write for a product designer, following the "Writing for a product designer" sec
 2. **Merge inventories:** one row per component, deduped by `import_path`. Union `screens` and `issues`, and keep the most specific tags and the clearest `ui_description`.
 3. **Merge findings into issue kinds:** every finding goes under its kind ID from `issue-kinds.md`. A finding counts once per report, whether it was a full finding or an "Already reported" line. Re-check across screens: something unique on one screen may duplicate something on another.
 4. **Classify:** use the kind's category. Findings marked "Proposed new kind" stay proposed; group similar ones and suggest one kind for them.
-5. **Route** (only in `propose` or `create` mode): follow `routing.md` for every issue in the merged list. One card per issue, with every affected screen listed, never one card per screen. Before creating anything, check for open cards from earlier roll-ups on the same issue and update them instead.
+5. **Existing cards:** update these instead of creating new ones. The result count next to the search box goes to card 6316. Tooltip look-alikes and tooltip content consistency go to card 6335. Tooltip-related findings that are missing tooltips (T06) or cut-off text (T10) still get normal fix cards.
+6. **Open questions:** questions Lior left open in a report ("Open, Lior hasn't decided yet") go to the decisions card.
+7. **Route** (only in `propose` or `create` mode): follow `routing.md` for every issue except U11 in the merged list. One card per issue, with every affected screen listed, never one card per screen. Before creating anything, check for open cards from earlier roll-ups on the same issue and update them instead.
 
 ## Outputs (save to `artifacts/`)
 
@@ -40,10 +43,11 @@ Write for a product designer, following the "Writing for a product designer" sec
    4. One section per category (Bug, Engineering only, Trivial decision, UX/UI process), each kind with its screens, a screenshot, and the fix or the question
    5. **Decisions needed:** pending Trivial decisions and proposed new kinds
    6. **Alignment backlog by element type:** for each type (status chips, buttons, filters, empty states…), the versions that exist, where they appear, how they differ, and the one to keep. Order by number of versions × screens affected
-   7. Missing from Storybook, ordered by how many screens use the element
+   7. Missing from Storybook: a short summary pointing to `storybook-gaps.csv`
    8. Gaps: listed cards with missing or incomplete audits
    9. Code health (for developers)
-3. `ui-audit-rollup.html`: self-contained HTML version with screenshots embedded. Regenerate it whenever the .md changes.
-4. In `propose` or `create` mode: `routing-plan.md` (format in `routing.md`). In `propose` mode, stop after writing it and ask Lior to approve it in this card's session.
+3. `storybook-gaps.csv`: one row per shared component missing from Storybook (or shown in another version) across all screens. Columns: `component, plain_name, import_path, status (missing-story / variant-missing), screens, usages_in_repo, variants_seen, audit_cards`. Sort by `usages_in_repo`, highest first. The daily Storybook schedule reads this file. U11 findings never get fix cards; this file replaces them.
+4. `ui-audit-rollup.html`: self-contained HTML version with screenshots embedded. Regenerate it whenever the .md changes.
+5. In `propose` or `create` mode: `routing-plan.md` (format in `routing.md`). In `propose` mode, stop after writing it and ask Lior to approve it in this card's session.
 
 Update the progress headline with the summary, then complete the session as the track expects.

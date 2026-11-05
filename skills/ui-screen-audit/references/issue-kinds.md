@@ -3,7 +3,7 @@
 The catalog of known issue kinds, from the first 7 screen audits and Lior's review (roll-up card 5854). Match every finding to a kind and reuse its ID and category.
 
 - A finding that matches no kind gets a category from `triage-rules.md` and is marked **"Proposed new kind"**. Only Lior adds kinds to this file.
-- **Decision status** applies to Trivial decisions. "Approved" means it's now a rule in `design-decisions.md`, so a new occurrence is a **Bug**. "Pending" means Lior hasn't answered the yes/no yet: list it under "Decisions needed". "Per component" means it never becomes a general rule: every occurrence is its own yes/no under "Decisions needed".
+- **Decision status** applies to Trivial decisions. "Approved" means it's now a rule in frontglance `DESIGN.md`, so a new occurrence is a **Bug**. "Pending" means Lior hasn't answered the yes/no yet: list it under "Decisions needed". "Per component" means it never becomes a general rule: every occurrence is its own yes/no under "Decisions needed".
 
 ## Active kinds
 
@@ -29,6 +29,9 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T23 | Item detail side panel width differs from 800px | Bug | | | Doesn't apply to filter pickers (e.g. Add-filter drawer) |
 | T24 | Full-page logo while loading instead of the widget and table skeletons | Bug | | | Found on Integrations Inventory (card 6111) |
 | T25 | Outlined icon-only button with a teal stroke instead of gray | Bug | | | Rule: gray stroke #cbd0d7 for every outlined icon-only button (card 6123, finding #5) |
+| T26 | Active filter shows no options | Bug | | | Card 6129, finding #6 |
+| T27 | Widget row icon left empty | Bug | | | Card 6129, finding #9. When the icons don't exist yet it's UX/UI process |
+| T28 | Same value in different letter case on one screen | Bug | | | Card 6128, "discovered" vs "Discovered" |
 | U01 | Widgets row breaks at smaller widths | UX/UI process | | | One responsive rule for every screen. Symptom: platform names squeezed out of instance labels |
 | U02 | Table toolbar overflows at smaller widths | UX/UI process | | | Designed once on the shared toolbar component |
 | U04 | Page scrolls in several nested layers | UX/UI process | | | Needs a scroll model for table screens |
@@ -37,6 +40,7 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | U08 | Row opens a side panel but shows no pointer cursor | Bug | | | Other inventory tables already do it |
 | U09 | Active filter isn't shown in the widget | UX/UI process | | | Needs a selected state for widget rows |
 | U10 | Confirmation dialogs built several ways | Trivial decision | | Approved | Keep the design-system pop-up the report names |
+| U12 | Element built without a design; replace with an existing design-system component | UX/UI process | | | Card 6126, finding #11 |
 | U11 | Element not documented in Storybook | Engineering only | | | A card drafts the Storybook entry for Lior to approve |
 
 ## Won't fix or not an issue (don't report)
@@ -49,6 +53,8 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T22 | Trash icon removes a filter | By design |
 | U03 | Side panel covers the table | By design |
 | U06 | No table error state | Global error pop-up already handles failed requests |
+| T29 | Disabled sanction dropdown in the side-panel header | Won't fix | Card 6128: by design |
+| T30 | Table search applies on Enter | Won't fix | Card 6128: by design |
 | T17 | Empty value shows nothing | By design: empty values stay empty, or show a "no info" tag in some places |
 
 ## Retired

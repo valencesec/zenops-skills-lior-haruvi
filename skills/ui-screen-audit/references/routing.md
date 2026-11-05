@@ -10,7 +10,8 @@ Used only by the `ui-audit-rollup` skill, after it has merged all screen reports
 | Category | Action |
 |---|---|
 | Bug | Fix card (bundling allowed, see below) |
-| Engineering only | Fix card (bundling allowed, see below) |
+| Engineering only (except U11) | Fix card (bundling allowed, see below) |
+| U11 (missing from Storybook) | No card. Goes into `storybook-gaps.csv` (see `ui-audit-rollup`) |
 | Trivial decision, **Approved** kind | It breaks a rule, so treat it as a Bug |
 | Trivial decision, **Pending** or **Per component** kind, or proposed new kind | Add to the decisions card. No fix card until Lior says yes |
 | UX/UI process | One UX/UI card per issue |
@@ -39,15 +40,16 @@ Inside a bundle, list each issue separately with its own screenshot, so Lior can
 
 - **Title:** `[UX/UI audit] <the design question>`
 - **Track:** product. **Owner:** Lior.
-- **Description:** the problem in user terms, every screen affected with screenshots, the options already known, and any rules from `design-decisions.md` that constrain the answer. Don't propose a final design.
+- **Description:** the problem in user terms, every screen affected with screenshots, the options already known, and any rules from frontglance `DESIGN.md` that constrain the answer. Don't propose a final design.
 
 ## Decisions card
 
 One card per roll-up run, collecting everything that needs Lior's yes/no:
 - **Title:** `[UI decisions] roll-up <date>`
 - **Track:** raw. **Owner:** Lior.
+- **Open questions:** questions Lior left open in a report ("Open, Lior hasn't decided yet") are listed here too.
 - **Description:** one item per decision: the question, the options, a screenshot, and which kind it belongs to (or "Proposed new kind" with its suggested category). Also list any proposed new kinds.
-- **When Lior answers in that card's session:** for each approved decision, open a draft pull request in `valencesec/zenops-skills-lior-haruvi` that adds the rule to `skills/ui-screen-audit/references/design-decisions.md` and updates the kind's status in `skills/ui-screen-audit/references/issue-kinds.md`. Then create the fix card for it. For approved new kinds, add them to `issue-kinds.md` in the same pull request.
+- **When Lior answers in that card's session:** for each approved rule, open a draft pull request on frontglance adding it to `DESIGN.md` in the right section, assigned to Lior (not to `design-decisions.md`). New kinds and status changes go to a draft pull request on `skills/ui-screen-audit/references/issue-kinds.md` in `valencesec/zenops-skills-lior-haruvi`. Never merge either. Then create the fix card for it.
 
 ## routing-plan.md
 

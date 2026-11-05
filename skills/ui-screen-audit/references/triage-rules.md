@@ -6,11 +6,11 @@ Severity (Must fix / Should fix / Consider) is separate from category. Category 
 
 ## Categories
 
-**Bug**: broken, no decision needed. Includes anything that breaks a rule in `design-decisions.md`, or a pattern the rest of the product already follows.
+**Bug**: broken, no decision needed. Includes anything that breaks a rule in frontglance `DESIGN.md`, or a pattern the rest of the product already follows.
 - A pop-up taller than 80% of the window.
 - Low/No Code rows open a panel but show no pointer cursor, while the other inventory tables do.
 
-**Trivial decision**: a yes/no, or a choice between two options that are already defined. Once Lior approves it, it becomes a rule in `design-decisions.md`, and from then on anything that breaks it is a Bug.
+**Trivial decision**: a yes/no, or a choice between two options that are already defined. Once Lior approves it, it becomes a rule in frontglance `DESIGN.md`, and from then on anything that breaks it is a Bug.
 - Every icon-only button shows a tooltip with its action name (approved; now a rule).
 - The same element is built more than once and the copies already look or behave differently: the report names the version to keep (the one in Storybook, the most used, or the most complete) and Lior approves it. If no version is clearly right, say so, and it becomes a UX/UI process.
 
@@ -24,7 +24,7 @@ Some Trivial decisions can't become general rules because the answer depends on 
 - Screen-reader names: they use the tooltip or visible label text, and the severity stays Must fix.
 - An element missing from Storybook: a card drafts the entry for Lior to approve.
 
-**Won't fix**: Lior decided not to work on it. Don't raise it again (see "Never flag" in `design-decisions.md`).
+**Won't fix**: Lior decided not to work on it. Don't raise it again (see "Never flag" in `design-decisions.md` and "Intentional behaviour" in `DESIGN.md`).
 
 **Not an issue (by design)**: the finding describes an approved choice. Don't report it.
 
