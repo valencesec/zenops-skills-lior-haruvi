@@ -9,11 +9,11 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 
 | ID | Kind | Category | Tag | Decision status | Notes |
 |---|---|---|---|---|---|
-| T01 | Small gray secondary text too light (under 4.5:1) | Trivial decision | Accessibility | Approved | Rule: small gray text uses the darker secondary gray (#5f6672, 5.8:1) |
-| T02 | Lightest grays used for readable text (hints, "No Information") | Trivial decision | Accessibility | Approved | Rule: lightest grays only for borders and disabled items; one placeholder color at 4.5:1 or more |
+| T01 | Small gray text lighter than gray_700 used for readable text (under 4.5:1) | Trivial decision | Accessibility | Approved | Rule: gray_700 (#727a86) is the approved colour for attribute labels and small secondary text. T01 flags only grays lighter than gray_700 used for readable text |
+| T02 | Lightest grays used for readable text (hints, "No Information") | Trivial decision | Accessibility | Approved | Rule: lightest grays only for borders and disabled items; one placeholder color at 4.5:1 or more. Empty or unavailable values ("No Information", "Unknown", "None") in gray_600 (#969da9) are allowed by DESIGN.md and are not a finding |
 | T03 | Status and accent colors too light for text or icons | Trivial decision | Accessibility | Per component | Not a general rule: Lior decides each component separately. Every occurrence goes to the decisions card with the component, the color and its contrast |
 | T04 | Same element in different sizes, or text under 10px | Bug | | | Breaks existing size rules |
-| T05a | Side panel breaks the drawer rules (heading sizes and colours, label and value styles, pinned area) | Trivial decision | | Approved | Rule: title is the largest text; headings semibold black; attribute labels regular #5f6672 with no colon, values black; only title, close and tabs stay pinned. Example: Identities panel "Title" label is black and its value gray (reversed) |
+| T05a | Side panel breaks the drawer rules (heading sizes and colours, label and value styles, pinned area) | Trivial decision | | Approved | Rule: title is the largest text; headings semibold black; attribute labels regular gray_700 #727a86 with no colon, values black; only title, close and tabs stay pinned. Example: Identities panel "Title" label is black and its value gray (reversed) |
 | T05b | Area built without a design process needs a redesign | UX/UI process | | | Activity Monitoring side panel |
 | T06 | Icon-only button without a tooltip | Trivial decision | | Approved | Now a rule, so new occurrences are Bugs |
 | T07 | Control or meaningful icon without a screen-reader name | Engineering only | Accessibility | | Name = tooltip or visible label; severity stays Must fix |

@@ -16,6 +16,8 @@ The `ui-screen-audit` skill's reference files are the source of truth:
 - `skills/ui-screen-audit/references/issue-kinds.md`
 - `skills/ui-screen-audit/references/routing.md` (how issues become cards)
 
+Earlier findings that flagged gray_700 text (T01) or gray_600 empty values (T02) are dropped by later decisions.
+
 Write for a product designer, following the "Writing for a product designer" section of `skills/ui-screen-audit/SKILL.md`.
 
 ## Inputs

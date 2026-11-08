@@ -23,6 +23,8 @@ Lior Haruvi owns `DESIGN.md`. Treat its rules as facts: anything that breaks one
 - A side panel covering the table
 - Cut-off search box hints
 - Blank (empty) values
+- gray_700 (#727a86) on attribute labels and small secondary text
+- Empty or unavailable values in gray_600 (#969da9)
 - The bulk-action bar (Actions, Change Severity, Track/Untrack) until design says otherwise
 
 ## In the old file but not in DESIGN.md
