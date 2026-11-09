@@ -32,6 +32,7 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T26 | Active filter shows no options | Bug | | | Card 6129, finding #6 |
 | T27 | Widget row icon left empty | Bug | | | Card 6129, finding #9. When the icons don't exist yet it's UX/UI process |
 | T28 | Same value in different letter case on one screen | Bug | | | Card 6128, "discovered" vs "Discovered" |
+| T31 | Heading, tab or button not in Title Case | Bug | | | Breaks DESIGN.md: every button, heading, tab and attribute label capitalizes every word, except short words (to, of, in, on, at, by, for, and, or, the, a, an) unless first: "Export to PDF". Approved by Lior on card 6576 |
 | U01 | Widgets row breaks at smaller widths | UX/UI process | | | One responsive rule for every screen. Symptom: platform names squeezed out of instance labels |
 | U02 | Table toolbar overflows at smaller widths | UX/UI process | | | Designed once on the shared toolbar component |
 | U04 | Page scrolls in several nested layers | UX/UI process | | | Needs a scroll model for table screens |
