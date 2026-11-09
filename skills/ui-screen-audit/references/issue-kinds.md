@@ -17,7 +17,7 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T05b | Area built without a design process needs a redesign | UX/UI process | | | Activity Monitoring side panel |
 | T06 | Icon-only button without a tooltip | Trivial decision | | Approved | Now a rule, so new occurrences are Bugs |
 | T07 | Control or meaningful icon without a screen-reader name | Engineering only | Accessibility | | Name = tooltip or visible label; severity stays Must fix |
-| T10 | Cut-off data text without "…" or full value on hover | Trivial decision | | Approved | Search hints and non-essential text are exempt (see design decisions). Includes a platform shown only as a logo whose hover doesn't show the platform and instance name (DESIGN.md rule) |
+| T10 | Cut-off data text without "…" or full value on hover | Trivial decision | | Approved | Search hints and non-essential text are exempt (see design decisions). Includes a platform shown only as a logo whose hover doesn't show the platform and instance name, e.g. "Sophos Primary" (DESIGN.md rule). The "platform + instance" hover is needed only when the logo stands alone |
 | T12 | Last side-panel tab cut off mid-word | Trivial decision | | Approved | Rule: whole tabs move into the "…" menu, never half a tab |
 | T13 | Small alignment and spacing slips | Bug | | | Fix to the existing pattern next to it |
 | T14 | Pop-up taller than 80% of the window | Bug | | | Breaks the pop-up rule |
@@ -35,10 +35,14 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T31 | Heading, tab or button not in Title Case | Bug | | | Breaks DESIGN.md: every button, heading, tab and attribute label capitalizes every word, except short words (to, of, in, on, at, by, for, and, or, the, a, an) unless first: "Export to PDF". Approved by Lior on card 6576 |
 | T32 | Empty value shown as a dash | Bug | | | Approved by Lior on card 6576 |
 | T33 | Count shows 0 while loading | Bug | | | Approved by Lior on card 6576 |
+| T34 | Label ends with a colon | Bug | | | Breaks DESIGN.md: labels never end with a colon, anywhere in the product. Approved by Lior on card 6576 |
+| T35 | Layout jumps while the screen loads (a skeleton the wrong size, overflowing or drawn over, or an element that appears late and pushes others) | Bug | | | Cards 6577, 6580, 6128 |
+| T36 | Column opens too narrow (a flexible column squeezed by fixed columns) | Bug | | | Cards 6580, 6130 |
+| T37 | Same thing named differently on one screen | Bug | | | Card 6580 |
 | U01 | Widgets row breaks at smaller widths | UX/UI process | | | One responsive rule for every screen. Symptom: platform names squeezed out of instance labels |
 | U02 | Table toolbar overflows at smaller widths | UX/UI process | | | Designed once on the shared toolbar component |
 | U04 | Page scrolls in several nested layers | UX/UI process | | | Needs a scroll model for table screens |
-| U05 | Empty states look different in different places | UX/UI process | | | Needs one empty-state system |
+| U05 | Empty state not built from the empty-state component (Regular or Mini), or the wrong size for its place | UX/UI process | | | Needs one empty-state system |
 | U07 | Links don't show where they lead | UX/UI process | | | Needs a product-wide link convention |
 | U08 | Row opens a side panel but shows no pointer cursor | Bug | | | Other inventory tables already do it |
 | U09 | Active filter isn't shown in the widget | UX/UI process | | | Needs a selected state for widget rows |
