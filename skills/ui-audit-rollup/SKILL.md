@@ -32,8 +32,9 @@ Write for a product designer, following the "Writing for a product designer" sec
 3. **Merge findings into issue kinds:** every finding goes under its kind ID from `issue-kinds.md`. A finding counts once per report, whether it was a full finding or an "Already reported" line. Re-check across screens: something unique on one screen may duplicate something on another.
 4. **Classify:** use the kind's category. Findings marked "Proposed new kind" stay proposed; group similar ones and suggest one kind for them.
 5. **Existing cards:** update these instead of creating new ones. The result count next to the search box goes to card 6316. Tooltip look-alikes and tooltip content consistency go to card 6335. Tooltip-related findings that are missing tooltips (T06) or cut-off text (T10) still get normal fix cards.
-6. **Open questions:** questions Lior left open in a report ("Open, Lior hasn't decided yet") go to the decisions card.
-7. **Route** (only in `propose` or `create` mode): follow `routing.md` for every issue except U11 in the merged list. One card per issue, with every affected screen listed, never one card per screen. Before creating anything, check for open cards from earlier roll-ups on the same issue and update them instead.
+6. **Deferred and dashboard findings:** findings under "Deferred by Lior" and "Dashboard design task (for Lior)" in a report get no fix cards. List them in `ui-audit-rollup.md` under "Deferred" and "For the dashboard design task".
+7. **Open questions:** questions Lior left open in a report ("Open, Lior hasn't decided yet") go to the decisions card.
+8. **Route** (only in `propose` or `create` mode): follow `routing.md` for every issue except U11 in the merged list. One card per issue, with every affected screen listed, never one card per screen. Before creating anything, check for open cards from earlier roll-ups on the same issue and update them instead.
 
 ## Outputs (save to `artifacts/`)
 
@@ -44,6 +45,7 @@ Write for a product designer, following the "Writing for a product designer" sec
    3. All issue kinds in one table: ID, kind, screens affected, highest severity, category, tag, decision status
    4. One section per category (Bug, Engineering only, Trivial decision, UX/UI process), each kind with its screens, a screenshot, and the fix or the question
    5. **Decisions needed:** pending Trivial decisions and proposed new kinds
+   5a. **Deferred** and **For the dashboard design task**: the findings from step 6, each with its screens and kind ID
    6. **Alignment backlog by element type:** for each type (status chips, buttons, filters, empty states…), the versions that exist, where they appear, how they differ, and the one to keep. Order by number of versions × screens affected
    7. Missing from Storybook: a short summary pointing to `storybook-gaps.csv`
    8. Gaps: listed cards with missing or incomplete audits

@@ -25,6 +25,7 @@ Search for an open card about the same issue kind (`list_cards` with a keyword f
 
 - **Title:** `[UI fix] <what's wrong, in user terms>`
 - **Track:** engineering. **Team** and **owner**: same as the roll-up card unless the roll-up card says otherwise.
+- **Target picture:** when the fix changes structure, layout or the look of an element (not only a colour, text, token or tooltip), the description must also say: "The plan must include a picture of the target (a screenshot of the existing pattern to copy, or a mockup) for Lior to approve at the plan step, before any code." The roll-up decides this per card from the kind of change. Never add it to a colour, text, token or tooltip fix.
 - **Description:** each issue with its kind ID, every screen affected (with its audit card number), screenshot links (from the audit cards' artifacts), the expected result in design terms, and the developer notes. End with: "Before merging, attach before-and-after screenshots of every screen listed, for Lior's design review."
 
 ### Bundling small fixes
@@ -53,4 +54,4 @@ One card per roll-up run, collecting everything that needs Lior's yes/no:
 
 ## routing-plan.md
 
-A table with one row per card: action (create / update existing #N), card title, category, kind IDs, screens, and why bundled (if it is a bundle). Follow it with the list of findings that got no card and why (Won't fix, Not an issue, waiting for a decision).
+A table with one row per card: action (create / update existing #N), card title, category, kind IDs, screens, and why bundled (if it is a bundle). Follow it with the list of findings that got no card and why (Won't fix, Not an issue, waiting for a decision, Deferred by Lior, Dashboard design task). Findings under "Deferred by Lior" and "Dashboard design task (for Lior)" never get fix cards.
