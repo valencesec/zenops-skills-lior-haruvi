@@ -17,7 +17,7 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T05b | Area built without a design process needs a redesign | UX/UI process | | | Activity Monitoring side panel |
 | T06 | Icon-only button without a tooltip | Trivial decision | | Approved | Now a rule, so new occurrences are Bugs |
 | T07 | Control or meaningful icon without a screen-reader name | Engineering only | Accessibility | | Name = tooltip or visible label; severity stays Must fix |
-| T10 | Cut-off data text without "…" or full value on hover | Trivial decision | | Approved | Search hints and non-essential text are exempt (see design decisions). Includes a platform shown only as a logo whose hover doesn't show the platform and instance name, e.g. "Sophos Primary" (DESIGN.md rule). The "platform + instance" hover is needed only when the logo stands alone |
+| T10 | Cut-off data text without "…" or full value on hover | Trivial decision | | Approved | Search hints and non-essential text are exempt (see design decisions). Includes a platform shown only as a logo whose hover doesn't show the platform and instance name, e.g. "Sophos Primary" (DESIGN.md rule). The "platform + instance" hover is needed only when the logo stands alone; when the instance name is shown next to it, a platform-only hover is fine |
 | T12 | Last side-panel tab cut off mid-word | Trivial decision | | Approved | Rule: whole tabs move into the "…" menu, never half a tab |
 | T13 | Small alignment and spacing slips | Bug | | | Fix to the existing pattern next to it |
 | T14 | Pop-up taller than 80% of the window | Bug | | | Breaks the pop-up rule |
@@ -28,7 +28,7 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T21b | Copies of the same element that already look or behave differently | Trivial decision | | Approved | Keep the version the report names; if none is clearly right, UX/UI process |
 | T23 | Item detail side panel width differs from 800px | Bug | | | Doesn't apply to filter pickers (e.g. Add-filter drawer) |
 | T24 | Full-page logo while loading instead of the widget and table skeletons | Bug | | | Found on Integrations Inventory (card 6111) |
-| T25 | Outlined icon-only button with a teal stroke instead of gray | Bug | | | Rule: gray stroke #cbd0d7 for every outlined icon-only button (card 6123, finding #5) |
+| T25 | Outlined icon-only button with a teal stroke instead of gray | Bug | | | Rule: gray stroke #cbd0d7 for every outlined icon-only button (card 6123, finding #5). The gray stroke is for the resting state; a teal stroke on hover is fine |
 | T26 | Active filter shows no options | Bug | | | Card 6129, finding #6 |
 | T27 | Widget row icon left empty | Bug | | | Card 6129, finding #9. When the icons don't exist yet it's UX/UI process |
 | T28 | Same value in different letter case on one screen | Bug | | | Card 6128, "discovered" vs "Discovered" |
@@ -39,6 +39,11 @@ The catalog of known issue kinds, from the first 7 screen audits and Lior's revi
 | T35 | Layout jumps while the screen loads (a skeleton the wrong size, overflowing or drawn over, or an element that appears late and pushes others) | Bug | | | Cards 6577, 6580, 6128 |
 | T36 | Column opens too narrow (a flexible column squeezed by fixed columns) | Bug | | | Cards 6580, 6130 |
 | T37 | Same thing named differently on one screen | Bug | | | Card 6580 |
+| T38 | Table toolbar has no result count | Bug | | | Card 6741 (Tags), approved by Lior 2026-11-10 |
+| T39 | Row highlights on hover but opens nothing | Bug | | | Card 6741 (Tags), approved by Lior 2026-11-10 |
+| T40 | Chart order changes between loads | Engineering only | | | Card 6577 (AI Security), finding #7, approved by Lior 2026-11-09 |
+| T41 | Side menu doesn't mark the current page | Bug | | | Card 6575 (Boards), finding #7, approved by Lior 2026-11-10 |
+| T42 | Status icon without a label or tooltip | Bug | | | Card 6575 (Boards), finding #9, approved by Lior 2026-11-10. A status icon with no text label shows its meaning in a tooltip |
 | U01 | Widgets row breaks at smaller widths | UX/UI process | | | One responsive rule for every screen. Symptom: platform names squeezed out of instance labels |
 | U02 | Table toolbar overflows at smaller widths | UX/UI process | | | Designed once on the shared toolbar component |
 | U04 | Page scrolls in several nested layers | UX/UI process | | | Needs a scroll model for table screens |
