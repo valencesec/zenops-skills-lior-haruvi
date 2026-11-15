@@ -30,7 +30,9 @@ Write for a product designer, following the "Writing for a product designer" sec
 1. For each card: `list_artifacts(cardId)`, then read `component-inventory-*.json` and the newest `ui-audit-*.md` with `get_artifact_content`. If a card has no report, list it under Gaps and continue.
 2. **Merge inventories:** one row per component, deduped by `import_path`. Union `screens` and `issues`, and keep the most specific tags and the clearest `ui_description`.
 3. **Merge findings into issue kinds:** every finding goes under its kind ID from `issue-kinds.md`. A finding counts once per report, whether it was a full finding or an "Already reported" line. Re-check across screens: something unique on one screen may duplicate something on another.
-4. **Classify:** use the kind's category. Findings marked "Proposed new kind" stay proposed; group similar ones and suggest one kind for them.
+4. **Classify:** use the kind's category. Read each kind's name from `issue-kinds.md` and never show a catalog kind blank or as "proposed new kind". A finding with no catalog kind stays "Proposed new kind": group similar ones and suggest one kind for them. Map a proposed kind that matches a rule in `DESIGN.md` to that rule's kind, and merge duplicates.
+   Every kind gets a **plain name** and a one-line **What it means**, with an example (for example: "Dash instead of 'No information' — an empty value shows '-' on one screen and 'N/A' on another."). Show them in the report, next to each card in the routing plan, and on the card drafts.
+   **Trivial decisions must be real yes/no questions.** Before you propose the decisions card, check each one. If it needs design work (options to explore, a layout, several screens), move it to UX/UI process as a design task and say so.
 5. **Existing cards:** update these instead of creating new ones. The result count next to the search box goes to card 6316. Tooltip look-alikes and tooltip content consistency go to card 6335. Tooltip-related findings that are missing tooltips (T06) or cut-off text (T10) still get normal fix cards.
 6. **Deferred and dashboard findings:** findings under "Deferred by Lior" and "Dashboard design task (for Lior)" in a report get no fix cards. List them in `ui-audit-rollup.md` under "Deferred" and "For the dashboard design task".
 7. **Open questions:** questions Lior left open in a report ("Open, Lior hasn't decided yet") go to the decisions card.
@@ -40,7 +42,10 @@ Write for a product designer, following the "Writing for a product designer" sec
 
 1. `component-inventory-master.csv` and `.json`: the screen-audit columns plus `screens` as a list and `screen_count`.
 2. `ui-audit-rollup.md`:
-   1. How to read this report (categories, severity, confidence, the Accessibility tag)
+   1. How to read this report: three short boxes, in plain words, then confidence and the Accessibility tag.
+      - **The 4 categories**, one sentence each saying who acts: Bug (a developer fixes something that breaks a design rule), Engineering only (a developer fixes something users don't see), Trivial decision (Lior answers a yes/no), UX/UI process (Lior designs it).
+      - **The card groups**, what each is and what approving creates: B fixes (one `[UI fix]` card per Bug issue), E behind-the-scenes (one `[UI fix]` card per Engineering only issue), D decisions card (one card with every yes/no question), UX design tasks (one `[UX/UI audit]` card per issue), X additions to existing cards (the issue is added to a card that already exists, nothing new is created).
+      - **Severity:** Must fix, Should fix, Consider, one sentence each.
    2. Summary: screens covered, unique UI elements, Storybook coverage, count per category
    3. All issue kinds in one table: ID, kind, screens affected, highest severity, category, tag, decision status
    4. One section per category (Bug, Engineering only, Trivial decision, UX/UI process), each kind with its screens, a screenshot, and the fix or the question
@@ -50,8 +55,8 @@ Write for a product designer, following the "Writing for a product designer" sec
    7. Missing from Storybook: a short summary pointing to `storybook-gaps.csv`
    8. Gaps: listed cards with missing or incomplete audits
    9. Code health (for developers)
-3. `storybook-gaps.csv`: one row per shared component missing from Storybook (or shown in another version) across all screens. Columns: `component, plain_name, import_path, status (missing-story / variant-missing), screens, usages_in_repo, variants_seen, audit_cards`. Sort by `usages_in_repo`, highest first. The daily Storybook schedule reads this file. U11 findings never get fix cards; this file replaces them.
+3. `storybook-gaps.csv`: if a card titled "Storybook gaps: find duplicates and shorten the list" exists, start from its `storybook-gaps.csv` and keep its merges, then add components from new audits. One row per shared component missing from Storybook (or shown in another version) across all screens. Columns: `component, plain_name, import_path, status (missing-story / variant-missing), screens, usages_in_repo, variants_seen, audit_cards`. Sort by `usages_in_repo`, highest first. The daily Storybook schedule reads this file. U11 findings never get fix cards; this file replaces them.
 4. `ui-audit-rollup.html`: self-contained HTML version with screenshots embedded. Regenerate it whenever the .md changes.
-5. In `propose` or `create` mode: `routing-plan.md` (format in `routing.md`). In `propose` mode, stop after writing it and ask Lior to approve it in this card's session.
+5. In `propose` or `create` mode: `routing-plan.md` (format in `routing.md`), with the same three "how to read" boxes at the top. The approval form opens with them too. In `propose` mode, stop after writing it and ask Lior to approve it in this card's session.
 
 Update the progress headline with the summary, then complete the session as the track expects.
