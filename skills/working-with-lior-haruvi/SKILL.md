@@ -7,7 +7,7 @@ description: How I want agents to work on my cards. Load at session start, at ev
 
 I'm a product designer (GitHub `liorharuvi-valence`). My cards are UI and design-system work in frontglance, plus UI audits. I judge by looking, not by reading a diff.
 
-These rules are injected into every session. If you cannot see them in your context, load this skill again (compaction and `/clear` drop it). Quotes and card/PR citations for every rule are in [references/evidence-log.md](references/evidence-log.md); do not load it to work. Mined through 2026-11-08.
+These rules are injected into every session. If you cannot see them in your context, load this skill again (compaction and `/clear` drop it). Quotes and card/PR citations for every rule are in [references/evidence-log.md](references/evidence-log.md); do not load it to work. Mined through 2026-11-15.
 
 ## Rules
 
@@ -26,24 +26,29 @@ These rules are injected into every session. If you cannot see them in your cont
 10. Use existing tokens, never hard-coded colors or eyeballed spacing; if no token matches, flag it instead of adding one.
 11. Text weight, color, spacing and icon behaviour match Figma, including hover and states. When code and Figma disagree, give me the exact values (padding, radius).
 12. What I upload to Artifacts or link from Figma is the spec. Read it first.
-13. Button, tag and headline text starts every word with a capital: "More Actions".
-14. Check a claim about the screen (e.g. a button exists) against the screen before stating it.
+13. Every button, heading, tab, tag, attribute label and table column header starts each word with a capital ("More Actions"; short words stay lowercase unless first: "Export to PDF"). Labels never end with a colon.
+14. Check a claim about the screen (a button exists, a font is fixed) or about a PR (ready for review, merged) against the screen or PR before stating it. Show the screenshots a finding rests on.
 
 ### Scope
 15. Do only what the card says. Don't touch other screens, shared styles or design-system components; list what would need a shared change in the PR description as "Shared drawer styles, handled separately".
 16. When I change styling or layout, confirm no content changed: list every screen that uses the changed component and compare before and after (fields, labels, values, tabs, counts).
-17. A separate task goes on its own card and must not block a PR in progress. Don't create extra cards or steps when I ask only for a PR.
+17. A separate task goes on its own card and must not block a PR in progress. When I ask to split, one PR per change. Don't create extra cards or steps when I ask only for a PR.
 18. Avoid dead code: stack on the open PR it depends on, as its own draft PR. Before pushing a stacked PR, check whether the base PR already covers or conflicts with it, and tell me.
 19. If I ask you to investigate, summarize or compare, change nothing until I decide. Push only when I say.
-20. When I relay a reviewer's comment, say whether you agree and why before changing anything.
+20. When I relay a reviewer's comment, say whether you agree and why before changing anything; answer every comment the reviewer wrote.
 21. Before a batch action across cards, list the cards first (only mine) and wait for my pick.
 
 ### Status and hand-off
-22. I decide when a card is done, ready for review, or merged. Never mark it yourself; when I ask "is this done / ready?", answer yes or no first, then what is left.
+22. I decide when a card is done, ready for review, or merged. Never mark it yourself; when I ask "is this done / ready?" or "can I move this to done?", answer yes or no first, then what is left. An explicit "move it to ready for review" counts as my decision.
 23. When I say stop or cancel, stop; no further work.
 24. PR hand-off, in order: (a) tell me which scrum team last worked on the area; (b) use the VAL I give, or open it with that team ("you can always open"); (c) run `/code-review low --fix` on the diff; (d) push, open the PR, assign it and request review from the reviewer I name; (e) give me the PR link and attach it to the card (say so if it is a bug); (f) mark ready for review only when I say so; (g) tell me whether CI is green and give me a short Slack message for the reviewer.
 25. I approve each plan myself; an earlier approval is never standing.
 26. A card showing "needs input": read its open items and answer in two sentences (which item, who it is assigned to, what clears it). Don't start work.
+
+32. Explain in plain design words, not code terms: PR text, summaries, the 4-line executive summary ("not starting with QA passed"). When I ask "what does this mean?", rewrite it in UI terms.
+33. My answer applies only to the item I answered. It becomes a general rule only when I say so ("rule", "everywhere", "in the product"); otherwise it is per case.
+34. If the card description has a design-review step, open my review gate first (`human-gate`): one section per component, in-product and story screenshots side by side, a decision per component. Keep the PR draft and don't request the reviewer until I approve.
+35. When code review turns up problems and I say "Fix in engineering", move the card back to engineering and fix there; don't patch inside review.
 
 ### Audits
 27. Write findings in UI/UX terms, not code terms. Each finding is its own heading with a screenshot link and a working "Details: see finding #N" link; severity in words. Offer an HTML version.
