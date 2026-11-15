@@ -25,6 +25,7 @@ Re-read the block for the step you are entering. Tick each item in the hand-back
 
 ## Code review
 - [ ] `/code-review low --fix` on the card's diff (24c).
+- [ ] Problems found and I say "Fix in engineering": go back to engineering (35).
 - [ ] No dead code left behind (18).
 
 ## QA
@@ -33,6 +34,9 @@ Re-read the block for the step you are entering. Tick each item in the hand-back
 - [ ] Every claim about the screen checked against the screen (14).
 
 ## Review / PR hand-off
+- [ ] Card has a design-review step: open my review gate first, PR stays draft (34).
+- [ ] Summaries and PR text in plain design words (32).
+- [ ] State claims (ready for review, merged) checked on the PR (14).
 - [ ] Before and after screenshots in the PR description, matching the final design (5).
 - [ ] PR assigned, review requested from the reviewer I name (24d).
 - [ ] PR link given to me and attached to the card (24e).
