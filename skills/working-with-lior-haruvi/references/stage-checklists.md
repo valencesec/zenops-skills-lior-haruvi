@@ -5,7 +5,8 @@ Re-read the block for the step you are entering. Tick each item in the hand-back
 ## Intake
 - [ ] Load `working-with-lior-haruvi` yourself (don't wait to be told).
 - [ ] If the card names a WIP branch or PR, check what is on it and what is left before changing anything (19).
-- [ ] If I asked a question about card state ("needs input", "is this done"), answer it and don't start work (22, 26).
+- [ ] If I asked a question about card state ("needs input", "is this done", "what is the status"), answer it and don't start work (22, 26).
+- [ ] Read the card description's steps and follow them in order (33).
 
 ## Triage
 - [ ] Say which scrum team last worked on the area (24a).
@@ -16,6 +17,7 @@ Re-read the block for the step you are entering. Tick each item in the hand-back
 - [ ] I approve each plan myself; wait every time (25).
 - [ ] Scope is limited to the card; shared styles and other screens are listed as separate (15).
 - [ ] Name the existing component, layout and tokens you will reuse (9, 10).
+- [ ] Nothing in the plan for data or variants the product does not have (32).
 
 ## Engineering
 - [ ] Reuse existing components and tokens; build nothing new (9, 10).
@@ -38,8 +40,10 @@ Re-read the block for the step you are entering. Tick each item in the hand-back
 - [ ] PR link given to me and attached to the card (24e).
 - [ ] CI status and a short Slack message for the reviewer (24g).
 - [ ] Not marked ready for review, done or merged until I say so (22, 24f).
+- [ ] Design review gate opened and approved before the PR leaves draft (33).
 
 ## Audit cards
 - [ ] Findings in UI/UX terms, one heading each, working links, severity in words (27).
 - [ ] Measured values in findings; intentional variation not flagged (28, 29).
 - [ ] My answers applied, report regenerated (.md and HTML), end with what is done and what is open (30).
+- [ ] Each review form has an HTML companion with the same numbering (34); plain words, no internal codes, counts checked (35).

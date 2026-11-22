@@ -7,7 +7,7 @@ description: How I want agents to work on my cards. Load at session start, at ev
 
 I'm a product designer (GitHub `liorharuvi-valence`). My cards are UI and design-system work in frontglance, plus UI audits. I judge by looking, not by reading a diff.
 
-These rules are injected into every session. If you cannot see them in your context, load this skill again (compaction and `/clear` drop it). Quotes and card/PR citations for every rule are in [references/evidence-log.md](references/evidence-log.md); do not load it to work. Mined through 2026-11-08.
+These rules are injected into every session. If you cannot see them in your context, load this skill again (compaction and `/clear` drop it). Quotes and card/PR citations for every rule are in [references/evidence-log.md](references/evidence-log.md); do not load it to work. Mined through 2026-11-22.
 
 ## Rules
 
@@ -28,6 +28,7 @@ These rules are injected into every session. If you cannot see them in your cont
 12. What I upload to Artifacts or link from Figma is the spec. Read it first.
 13. Button, tag and headline text starts every word with a capital: "More Actions".
 14. Check a claim about the screen (e.g. a button exists) against the screen before stating it.
+32. Show only what the product really has: no variant, field, tab or data for something that doesn't exist yet. Storybook variants only for what the product uses.
 
 ### Scope
 15. Do only what the card says. Don't touch other screens, shared styles or design-system components; list what would need a shared change in the PR description as "Shared drawer styles, handled separately".
@@ -43,13 +44,16 @@ These rules are injected into every session. If you cannot see them in your cont
 23. When I say stop or cancel, stop; no further work.
 24. PR hand-off, in order: (a) tell me which scrum team last worked on the area; (b) use the VAL I give, or open it with that team ("you can always open"); (c) run `/code-review low --fix` on the diff; (d) push, open the PR, assign it and request review from the reviewer I name; (e) give me the PR link and attach it to the card (say so if it is a bug); (f) mark ready for review only when I say so; (g) tell me whether CI is green and give me a short Slack message for the reviewer.
 25. I approve each plan myself; an earlier approval is never standing.
-26. A card showing "needs input": read its open items and answer in two sentences (which item, who it is assigned to, what clears it). Don't start work.
+26. A card showing "needs input", or my "what is the status / why is this stuck": read its open items and answer in two sentences (which item, who it is assigned to, what clears it). Don't start work.
+33. Follow the card description's steps in the order it gives, including forms and reports; don't skip one. The design review gate (`open_human_gate`) comes before the PR leaves draft, and I move the card on after I approve.
 
 ### Audits
 27. Write findings in UI/UX terms, not code terms. Each finding is its own heading with a screenshot link and a working "Details: see finding #N" link; severity in words. Offer an HTML version.
 28. Measure, don't describe: write the measured values (size, colors) in the finding.
 29. Don't flag intentional variation (toolbars per page, different control types, behaviour I call by design). If unsure, ask me with screenshots.
 30. Apply my answers exactly (reclassify, remove, "No longer reproduces"), regenerate the report, and end with whether it is done and which decisions are still open. Findings already on other screens go in one "Already reported on other screens" section.
+34. Every review form I answer also gets one HTML page in the card's files, same numbering, with screenshots, so I can decide without hunting.
+35. Reports for me use plain words and no internal codes (B13, X01). Check counts against another source before stating them, and don't infer "0 done" from a missing PR; ask me.
 
 ### Judgment
 31. On "ultrathink", or when I ask whether an organization, naming or CTA-placement choice follows industry standards (Material, Apple, Atlassian), compare against those systems and the product and say what you are unsure about.
@@ -67,7 +71,7 @@ These rules override default habits and the style of pipeline skills (e.g. what 
 | `ui-screen-audit`, `ui-audit-rollup`, `ui-audit-status` skills | Audit cards |
 
 ## Open questions
-Unresolved contradictions are listed in the PR that last updated this skill.
+Unresolved contradictions are listed in the PR that last updated this skill. Open now: rule 15 vs "apply it on all screens" for design-system component cards (7399, 7475); until I answer, ask me one short question when a component card could reach other screens.
 
 ## Maintaining this file
 Keep this file under ~120 lines and ~16 KB: numbered one-line rules only. Put quotes and citations in `references/evidence-log.md`, depth in `references/`, and link every reference file from the table above. A new or strengthened rule gets one line here; evidence goes in the log.
